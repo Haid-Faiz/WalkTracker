@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'androidx.navigation.safeargs.kotlin'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -63,21 +64,21 @@ dependencies {
     // Kotlin extensions & coroutines support for Room
     implementation "androidx.room:room-ktx:$room_version"
 
-    // Dagger Core
-    implementation "com.google.dagger:dagger:$dagger_version"
-    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+//    // Dagger Core
+//    implementation "com.google.dagger:dagger:$dagger_version"
+//    kapt "com.google.dagger:dagger-compiler:$dagger_version"
 
-    // Dagger Android
-    implementation "com.google.dagger:dagger-android:$dagger_version"
-    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+//    // Dagger Android
+//    implementation "com.google.dagger:dagger-android:$dagger_version"
+//    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
 
     // Dagger-Hilt
-    implementation "com.google.dagger:hilt-android:2.31.2-alpha"
-    kapt "com.google.dagger:dagger-android-comiper:2.31.2-alpha"
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 
-    // Google Maps Location Services
-    implementation "com.google.android.gms:play-services-location:18.0.0"
-    implementation "com.google.android.gms:play-services-maps:18.0.0"
+//    // Google Maps Location Services
+//    implementation "com.google.android.gms:play-services-location:18.0.0"
+//    implementation "com.google.android.gms:play-services-maps:18.0.0"
 
     // Timber
     implementation "com.jakewharton.timber:timber:4.7.1"
@@ -85,8 +86,8 @@ dependencies {
     // Easy Permissions
     implementation "pub.devrel:easypermissions:3.0.0"
 
-    // MPAndroid Chart
-    implementation "com.github.PhilJay:MPAndroidChart:v.3.1.0"
+//    // MPAndroid Chart
+//    implementation "com.github.PhilJay:MPAndroidChart:v.3.1.0"
 
     // Testing
     testImplementation "junit:junit:$junit_version"

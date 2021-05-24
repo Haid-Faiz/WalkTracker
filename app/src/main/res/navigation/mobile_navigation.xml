@@ -3,17 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_setup">
+
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.walktracker.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
-
+        android:id="@+id/navigation_setup"
+        android:name="com.example.walktracker.ui.setup.SetupFragment"
+        android:label="Setup" >
+        <action
+            android:id="@+id/action_setupFragment_to_runFragment"
+            app:destination="@id/navigation_run" />
+    </fragment>
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.walktracker.ui.run.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_run"
+        android:name="com.example.walktracker.ui.run.RunFragment"
+        android:label="Run" >
+        <action
+            android:id="@+id/action_runFragment_to_trackingFragment"
+            app:destination="@id/navigation_tracking" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_tracking"
+        android:name="com.example.walktracker.ui.tracking.TrackingFragment"
+        android:label="Tracking" />
+    <fragment
+        android:id="@+id/navigation_statistics"
+        android:name="com.example.walktracker.ui.statistics.StatisticsFragment"
+        android:label="Statistics" />
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.walktracker.ui.settings.SettingsFragment"
+        android:label="Settings" />
 </navigation>
